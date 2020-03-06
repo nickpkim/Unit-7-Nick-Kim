@@ -6,8 +6,12 @@ public class Rectangle extends Quadrilateral {
     public double calcArea(){
         return getSide(0) * getSide(3);
     }
+    public String toString(){
+        return super.toString() + " [Rectangle]";
+    }
     public static void main(String[] args) {
         Rectangle r = new Rectangle(3,5);
+        System.out.println(r);
         System.out.println(r.calcArea());
     }
 }

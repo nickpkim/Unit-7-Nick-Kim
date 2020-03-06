@@ -10,9 +10,6 @@ public abstract class Quadrilateral {
     public int getSide(int index){
         return sides[index];
     }
-    public int[] getAngles(){
-        return angles;
-    }
     public int calcPerimeter(){
         int perimeter = 0;
         for (int s : sides){
