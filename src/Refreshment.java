@@ -17,6 +17,13 @@ public class Refreshment {
     public void beConsumed(){
         exists = false;
     }
+    public boolean equals(Refreshment refreshment){
+        if (this == refreshment){
+            return true;
+        } else {
+            return false;
+        }
+    }
     public String toString(){
         return "Calories: "+calories+", Tasty Level: "+tastyLevel;
     }
