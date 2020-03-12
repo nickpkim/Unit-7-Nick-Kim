@@ -1,3 +1,5 @@
+import java.sql.Ref;
+
 public class Refreshment {
     private int calories;
     private int tastyLevel;
@@ -25,6 +27,19 @@ public class Refreshment {
         }
     }
     public String toString(){
-        return "Calories: "+calories+", Tasty Level: "+tastyLevel;
+        if (!exists){
+            return "I have been CONSUMED.";
+        } else {
+            return "Calories: "+calories+", Tasty Level: "+tastyLevel;
+        }
+    }
+
+    public static void main(String[] args) {
+        Refreshment r1 = new Refreshment(50, 30);
+        Refreshment r2 = new Refreshment(300, 80);
+        System.out.println(r1);
+        System.out.println(r2);
+        r1.beConsumed();
+        System.out.println(r1);
     }
 }
